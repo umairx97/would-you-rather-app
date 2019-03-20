@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Question from "./Question";
-import { Menu, Segment } from "semantic-ui-react";
+import { Menu, Segment, Header } from "semantic-ui-react";
 
 class Home extends Component {
   state = {
@@ -38,6 +38,12 @@ class Home extends Component {
           </Menu>
         </div>
         <ul className="dashboard-list">
+        <Header as="h2">
+          Would You Rather
+          <Header.Subheader>
+            Game based on Choice
+          </Header.Subheader>
+        </Header>
           {questionIds.map(id => (
             <Question key={id} id={id} answered={this.state.answered} />
           ))}

@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { handleAddQuestion } from "../actions/questions";
 import { Redirect } from "react-router-dom";
-import {
-  Grid,
-  Segment,
-  Header,
-  Form,
-  Divider
-} from "semantic-ui-react";
+import { Grid, Segment, Header, Form, Divider } from "semantic-ui-react";
 
 class NewQuestion extends Component {
   state = {
@@ -66,7 +60,7 @@ class NewQuestion extends Component {
             <Header as="h4">Would You Rather ...</Header>
             <Form size="large" onSubmit={this.handleSubmit}>
               <Form.Input
-                placeholder="Enter Option One Text Here"
+                placeholder="Enter option one"
                 value={optionOneText}
                 onChange={this.handleOptionOneChange}
                 className="textarea"
@@ -74,7 +68,7 @@ class NewQuestion extends Component {
               />
               <Divider horizontal>Or</Divider>
               <Form.Input
-                placeholder="Enter Option Two Text Here"
+                placeholder="Enter option two"
                 value={optionTwoText}
                 onChange={this.handleOptionTwoChange}
                 className="textarea"
