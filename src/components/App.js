@@ -1,5 +1,10 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  NavLink
+} from "react-router-dom";
 import { connect } from "react-redux";
 import { handleInitialData } from "../actions/shared";
 import Home from "./Home";
@@ -10,7 +15,7 @@ import QuestionPage from "./QuestionPage";
 import Nav from "./Nav";
 import LeaderBoard from "./LeaderBoard";
 import NoMatch from "./NoMatch";
-import { Container } from "semantic-ui-react";
+import { Container, Menu } from "semantic-ui-react";
 
 class App extends Component {
   componentDidMount() {
@@ -22,7 +27,13 @@ class App extends Component {
         <Fragment>
           <LoadingBar style={{ backgroundColor: "teal" }} />
           <Container>
-            <Nav />
+            {this.props.loading === true ? (
+              <Menu pointing secondary color="teal" activeIndex={1}>
+                <Menu.Item name="Login" as={NavLink} exact to="/" />
+              </Menu>
+            ) : (
+              <Nav />
+            )}
             {this.props.loading === true ? (
               <Login />
             ) : (
