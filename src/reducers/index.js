@@ -1,12 +1,12 @@
-import { combineReducers } from 'redux'
-import authedUser from './authedUser'
-import users from './users'
-import questions from './questions'
-import { loadingBarReducer } from 'react-redux-loading'
+import { combineReducers } from "redux";
+import authedUser from "./authedUser";
+import users from "./users";
+import questions from "./questions";
+import { loadingBarReducer } from "react-redux-loading";
 
-export const rootReducer =  combineReducers({
+export const rootReducer = combineReducers({
   authedUser,
   users,
   questions,
-  loadingBar: loadingBarReducer,
-})
+  loadingBar: loadingBarReducer
+});

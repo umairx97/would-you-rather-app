@@ -38,12 +38,10 @@ class Home extends Component {
           </Menu>
         </div>
         <ul className="dashboard-list">
-        <Header as="h2">
-          Would You Rather
-          <Header.Subheader>
-            Game based on Choice
-          </Header.Subheader>
-        </Header>
+          <Header as="h2">
+            Would You Rather
+            <Header.Subheader>Game based on Choice</Header.Subheader>
+          </Header>
           {questionIds.map(id => (
             <Question key={id} id={id} answered={this.state.answered} />
           ))}

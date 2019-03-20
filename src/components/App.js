@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <LoadingBar  style={{ backgroundColor: 'teal' }}/>
+          <LoadingBar style={{ backgroundColor: "teal" }} />
           <Container>
             <Nav />
             {this.props.loading === true ? (
@@ -45,7 +45,7 @@ class App extends Component {
 
 function mapStateToProps({ authedUser }) {
   return {
-    loading: authedUser === null,
+    loading: authedUser === null
   };
 }
 

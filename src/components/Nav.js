@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter, NavLink } from "react-router-dom";
 import { setAuthedUser } from "../actions/authedUser";
-import {
-  Menu,
-  Item
-} from "semantic-ui-react";
+import { Menu, Item } from "semantic-ui-react";
 
 class Nav extends Component {
   render() {

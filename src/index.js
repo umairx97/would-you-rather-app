@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 import { createStore, compose } from "redux";
 import { Provider } from "react-redux";
-import {rootReducer} from './reducers'
+import { rootReducer } from "./reducers";
 import middleware from "./middleware";
 import "semantic-ui-css/semantic.min.css";
 
